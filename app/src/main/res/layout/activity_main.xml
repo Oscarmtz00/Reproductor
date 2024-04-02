@@ -7,9 +7,74 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
 
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="253dp"
+            android:layout_height="278dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/portada1"
+            tools:layout_editor_absoluteY="89dp" />
+
+        <Button
+            android:id="@+id/btn_repetir"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/no_repetir"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="398dp" />
+
+        <Button
+            android:id="@+id/btn_siguiente"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/siguiente"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.919"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="398dp" />
+
+        <Button
+            android:id="@+id/btn_anterior"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/anterior"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.695"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="398dp" />
+
+        <Button
+            android:id="@+id/btn_play_pausa"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/reproducir"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="398dp" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/detener"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.282"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="398dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
