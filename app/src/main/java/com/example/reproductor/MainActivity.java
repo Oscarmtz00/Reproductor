@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 vectormp[posicion].stop();
                 posicion++;
                 vectormp[posicion].start();
+                vectormp[posicion].start();
 
                 if (posicion==0){
                     iv.setImageResource(R.drawable.portada1);
@@ -131,16 +132,38 @@ public class MainActivity extends AppCompatActivity {
 
     public void Anterior(View view){
 
-        if(posicion>=1){
-            if (vectormp [posicion].isPlaying()){
+        if(posicion >= 0){
+            if (vectormp[posicion].isPlaying()){
                 vectormp[posicion].stop();
-                vectormp[0]=MediaPlayer.create(this, R.raw.race);
-                vectormp[1]=MediaPlayer.create(this, R.raw.sound);
-                vectormp[2]=MediaPlayer.create(this, R.raw.tea);
                 posicion--;
+                vectormp[posicion].start();
+                vectormp[posicion].pause();
+
+
+                vectormp[posicion].reset();
+
+                vectormp[posicion].start();
+                if (posicion == 0){
+                    iv.setImageResource(R.drawable.portada1);
+                } else if(posicion == 1){
+                    iv.setImageResource(R.drawable.portada2);
+                } else if (posicion == 2){
+                    iv.setImageResource(R.drawable.portada3);
+                }
+            } else {
+                posicion--;
+
+
+                if (posicion == 0){
+                    iv.setImageResource(R.drawable.portada1);
+                } else if(posicion == 1){
+                    iv.setImageResource(R.drawable.portada2);
+                } else if(posicion == 2){
+                    iv.setImageResource(R.drawable.portada3);
+                }
             }
-        }else {
-            Toast.makeText(this, "No existen mas canciones para reproducir", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "No hay pistas anteriores para reproducir", Toast.LENGTH_SHORT).show();
         }
     }
 }
